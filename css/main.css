@@ -3,48 +3,57 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #2b2b2b;
+  font-size: 16px;
 }
 #about, #work, #contact {
-  height: 600px;
+  /* height: 600px; */
 }
-
+* {
+  border: solid blue 1px;
+}
 /* ------- GRID ---------------- */
 
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
 .full-width {
-  width: 1200px;
-  margin: 0 auto;
-}
-.half-width {
-  width: 600px;
-  float: left;
-}
-.third-width {
-  width: 400px;
-  float: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
 }
 
 /* ---------HEADER -------------- */
 
 header {
   background: url('../img/hero.png');
-  height: 800px;
   background-size: cover;
 }
 h1 {
   font-family: 'Lora', serif;
-  font-size: 30px;
+  font-size: 2em;
   color: #bbc085;
-  padding: 65px 0 65px 25px;
+  text-align: center;
 }
 nav {
-  float: right;
-  padding: 75px 25px;
+  /* padding: 75px 25px; */
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 80%;
+  padding-inline-start: 0;
 }
 nav ul li {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 nav ul li a {
-  padding-left: 80px;
+  /* padding-left: 80px; */
   text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
@@ -52,10 +61,8 @@ nav ul li a {
 }
 header h2 {
   font-family: 'Lora', serif;
-  font-size: 72px;
-  line-height: 80px;
-  clear: both;
-  padding: 20px 0 20px 25px;
+  font-size: 3em;
+  /* line-height: 80px; */
   color: #9b9b9b;
 }
 header h2 span {
@@ -113,12 +120,13 @@ header h2 span {
   background-color: #ebebeb;
 }
 #contact .full-width {
-  padding: 110px 0;
+  /* padding: 110px 0; */
 }
 /* Had to add an ID in the HTML for this image to make this work */
 #contact img#contact-img {
-  border: solid 12px white;
-  margin-left: 25px;
+  /* border: solid 12px white; */
+  width: 100%;
+  /* margin-left: 25px; */
 }
 #contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
     padding-left: 115px;
