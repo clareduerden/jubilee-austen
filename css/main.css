@@ -5,9 +5,7 @@ body {
   color: #2b2b2b;
   font-size: 16px;
 }
-#about, #work, #contact {
-  /* height: 600px; */
-}
+
 * {
   border: solid blue 1px;
 }
@@ -38,7 +36,6 @@ h1 {
   text-align: center;
 }
 nav {
-  /* padding: 75px 25px; */
   display: flex;
   justify-content: center;
 }
@@ -53,16 +50,15 @@ nav ul li {
   justify-content: center;
 }
 nav ul li a {
-  /* padding-left: 80px; */
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1em;
   text-transform: uppercase;
   color: #828282;
 }
 header h2 {
   font-family: 'Lora', serif;
   font-size: 3em;
-  /* line-height: 80px; */
+  line-height: 1.5em;
   color: #9b9b9b;
 }
 header h2 span {
@@ -71,20 +67,13 @@ header h2 span {
 
 /* --------- ABOUT SECTION --------- */
 
-/* COMBINATION selector - it says - for the full-width class for the about section ONLY  give it padding 80px top and bottom and 0 right to left */
-#about .full-width {
-  padding: 80px 0;
-}
 #about h2 {
   font-family: 'Lora', serif;
-  /* font-weight: 700; */
-  font-size: 36px;
-  padding-left: 50px;
+  font-size: 2em;
 }
 #about p {
-  font-size: 21px;
-  padding: 0px 50px;
-  line-height: 40px;
+  font-size: 1.5em;
+  line-height: 1.7;
   color: #7f7f7f;
 }
 
@@ -95,23 +84,21 @@ header h2 span {
   text-align: center;
 }
 #work .full-width {
-  padding: 115px 0;
+  padding: 100px 0;
 }
 #work img {
-  padding-bottom: 30px;
+  padding-bottom: 1.5em;
 }
 #work h3 {
-  font-size: 24px;
-  line-height: 32px;
-  /* font-weight: 700; */
-  width: 190px;
-  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 1.5;
+  width: 40%;
 }
 #work p {
   font-family: 'Lora', serif;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 0 50px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  /* padding: 0 4em; */
 }
 
 /* ---------- CONTACT SECTION -------- */
@@ -119,53 +106,37 @@ header h2 span {
 #contact {
   background-color: #ebebeb;
 }
-#contact .full-width {
-  /* padding: 110px 0; */
-}
 /* Had to add an ID in the HTML for this image to make this work */
 #contact img#contact-img {
-  /* border: solid 12px white; */
   width: 100%;
-  /* margin-left: 25px; */
 }
 #contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
-    padding-left: 115px;
+    /* padding-left: 115px; */
 }
 #contact #envelope {
-    padding: 0 10px 0 115px;
+    /* padding: 0 10px 0 115px; */
 }
 #contact h2 {
   font-family: 'Lora', serif;
-  /* font-weight: 700; */
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2em;
+  line-height: 2;
 }
 #contact #email-header {
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 400;
-  line-height: 44px;
-  margin: -30px 0 5px 0;
 }
 #contact #socialmedia-header {
-  font-size: 28px;
+  font-size: 1.5em;
   font-weight: 700;
-  line-height: 44px;
-  margin: 40px 0 0 0;
 }
 #contact a {
   font-weight: 700;
-  /* line-height: 44px; */
-  font-size: 28px;
+  font-size: 2em;
   color: #c49075;
   text-decoration: none;
 }
 #contact ul {
-    list-style: none;
-}
-#contact ul li {
-     display: inline-block;
-}
-#contact ul img {
-    font-size: 32px;
-    padding-right: 48px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
