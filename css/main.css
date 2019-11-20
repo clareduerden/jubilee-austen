@@ -1,29 +1,41 @@
 /* ------ BASE STYLES -------- */
 
+/* Remove more browser default padding */
+h1, h2, h3, h4, ul, p {
+  padding: 0;
+  margin: 0;
+
+}
+
+/* Set base font, size and color */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #2b2b2b;
   font-size: 16px;
 }
 
-* {
+/* * {
   border: solid blue 1px;
-}
-/* ------- GRID ---------------- */
+} */
+
+
+/* ------- MOBILE FIRST STYLES GO HERE ---------------- */
+
+/* Mobile First - General Layout Styles ------ */
 
 .center-content {
   display: flex;
   justify-content: center;
 }
-
 .full-width {
   display: flex;
   justify-content: center;
   flex-direction: column;
   max-width: 1200px;
+  width: 90%;
 }
 
-/* ---------HEADER -------------- */
+/* Header Styles - Mobile First ------ */
 
 header {
   background: url('../img/hero.png');
@@ -34,6 +46,7 @@ h1 {
   font-size: 2em;
   color: #bbc085;
   text-align: center;
+  margin: 1em 0;
 }
 nav {
   display: flex;
@@ -43,7 +56,6 @@ nav ul {
   display: flex;
   justify-content: space-around;
   flex-basis: 80%;
-  padding-inline-start: 0;
 }
 nav ul li {
   display: flex;
@@ -58,85 +70,157 @@ nav ul li a {
 header h2 {
   font-family: 'Lora', serif;
   font-size: 3em;
-  line-height: 1.5em;
+  line-height: 1.2;
   color: #9b9b9b;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 header h2 span {
   color: #2b2b2b;
 }
 
-/* --------- ABOUT SECTION --------- */
+/* About Section Styles - Mobile First ------ */
 
+#about .full-width {
+  margin: 2em 0;
+}
 #about h2 {
   font-family: 'Lora', serif;
   font-size: 2em;
+  margin-bottom: 1em;
 }
 #about p {
-  font-size: 1.5em;
-  line-height: 1.7;
+  font-size: 1.2em;
+  line-height: 1.5;
   color: #7f7f7f;
+  margin-bottom: 1em;
 }
 
-/* ---------WORK SECTION ----------- */
+/* Work Section Styles - Mobile First ------ */
 
 #work {
   background-color: #f9ceb7;
   text-align: center;
 }
+/* flex direction is column so need to center align along cross axis */
 #work .full-width {
-  padding: 100px 0;
+  align-items: center;
+  margin: 2em 0;
+}
+#work article {
+  width: 80%;
+  margin-bottom: 2em;
 }
 #work img {
-  padding-bottom: 1.5em;
+  margin: 1em 0;
 }
 #work h3 {
   font-size: 1.5em;
-  line-height: 1.5;
-  width: 40%;
 }
 #work p {
   font-family: 'Lora', serif;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.6;
-  /* padding: 0 4em; */
 }
 
-/* ---------- CONTACT SECTION -------- */
+/* Contact Section Styles - Mobile First ------ */
 
 #contact {
   background-color: #ebebeb;
 }
+#contact .full-width {
+  margin: 2em 0;
+}
 /* Had to add an ID in the HTML for this image to make this work */
 #contact img#contact-img {
   width: 100%;
-}
-#contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
-    /* padding-left: 115px; */
-}
-#contact #envelope {
-    /* padding: 0 10px 0 115px; */
+  margin-bottom: 1em;
+  border: 2px white solid;
 }
 #contact h2 {
   font-family: 'Lora', serif;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 2;
 }
 #contact #email-header {
-  font-size: 2em;
-  font-weight: 400;
-}
-#contact #socialmedia-header {
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 400;
+  margin-bottom: 1em;
 }
+#contact #envelope {
+  margin-right: 0.2em;
+}
+/* This is is mailto link */
 #contact a {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.2em;
   color: #c49075;
   text-decoration: none;
 }
-#contact ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
+/* Social Media header and links are below */
+#contact #socialmedia-header {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
+#contact ul {
+    display: flex;
+    list-style-type: none;
+}
+#contact ul li {
+  margin-right: 1.5em;
+}
+
+
+/* ------ TABLET STYLES START HERE --------- */
+
+@media (min-width: 768px) {
+
+  /* Header Section - Tablet Styles -------- */
+
+  header .full-width {
+    margin-top: 3em;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    width: 40%;
+  }
+  header h2 {
+    margin-bottom: 4em;
+    /* Make header h2 90% width to make the text wrap looks better */
+    width: 90%;
+  }
+
+  /* Work Section - Tablet Styles------ */
+
+  #work .full-width {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* Align the nested articles along the top */
+    align-items: flex-start;
+  }
+  #work article {
+    width: 30%;
+  }
+
+} /* End of Tablet Media Query */
+
+
+/* ------ DESKTOP STYLES START HERE ------------ */
+
+@media (min-width: 1200px) {
+
+  /* Header Section - Desktop Styles -------- */
+
+  header nav {
+    width: 40%;
+  }
+  header h2 {
+    font-size: 4.5em;
+    margin-bottom: 5em;
+  }
+
+} /* End of Desktop Media Query */
