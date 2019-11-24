@@ -132,21 +132,20 @@ header h2 span {
 }
 /* Had to add an ID in the HTML for this image to make this work */
 #contact img#contact-img {
-  width: 100%;
-  margin-bottom: 1em;
-  border: 2px white solid;
+  width: 98%;
+  border: 0.5em white solid;
 }
 #contact h2 {
   font-family: 'Lora', serif;
   font-size: 1.5em;
-  line-height: 2;
+  margin-top: 1em;
 }
-#contact #email-header {
+#email-header {
   font-size: 1.5em;
   font-weight: 400;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
-#contact #envelope {
+#envelope {
   margin-right: 0.2em;
 }
 /* This is is mailto link */
@@ -157,10 +156,10 @@ header h2 span {
   text-decoration: none;
 }
 /* Social Media header and links are below */
-#contact #socialmedia-header {
+#socialmedia-header {
   font-size: 1.2em;
   font-weight: 700;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 #contact ul {
@@ -168,7 +167,7 @@ header h2 span {
     list-style-type: none;
 }
 #contact ul li {
-  margin-right: 1.5em;
+  margin-right: 2em;
 }
 
 
@@ -203,6 +202,12 @@ header h2 span {
   }
   #work article {
     flex-basis: 30%;
+  }
+
+  /* Contact Section - Tablet Styles -------- */
+
+  #contact img#contact-img {
+    width: 60%;
   }
 
 } /* End of Tablet Media Query */
@@ -256,5 +261,30 @@ header h2 span {
   #work article {
     flex-basis: 25%;
   }
+
+  /* Contact Section - Desktop Styles -------- */
+
+  #contact .full-width {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6em 0;
+  }
+  #contact img#contact-img {
+    width: 45%;
+  }
+  #contact-info {
+    width: 40%;
+  }
+  #contact h2,
+  #contact #email-header {
+    font-size: 2.2em;
+  }
+  #contact a,
+  #socialmedia-header {
+    font-size: 1.8em;
+  }
+  #contact ul li {
+    margin-right: 3em;
+  } 
 
 } /* End of Desktop Media Query */
